@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://ctg8ov4thquj3" path="res://Scripts/PipeSpawner.cs" id="3_jcie0"]
 [ext_resource type="Script" uid="uid://2ed7qlvjfrub" path="res://Scripts/KillZoneLogic.cs" id="4_0jcdb"]
 [ext_resource type="Script" uid="uid://ensgxkcypfkx" path="res://Scripts/LogicManager.cs" id="5_xgk6d"]
+[ext_resource type="AudioStream" uid="uid://nw87cr4kslds" path="res://Assets/PointGet.wav" id="6_k0nhr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stn4p"]
 size = Vector2(4634, 272)
@@ -26,6 +27,7 @@ zoom = Vector2(0.25, 0.25)
 limit_enabled = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1852774760 groups=["Death"]]
+position = Vector2(0, -3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1103976556]
 position = Vector2(0, 1182)
@@ -77,3 +79,6 @@ text = "Score: 0"
 [node name="LogicManager" type="Node2D" parent="." unique_id=1589461450 node_paths=PackedStringArray("scoreText") groups=["LogicManager"]]
 script = ExtResource("5_xgk6d")
 scoreText = NodePath("../Label")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LogicManager" unique_id=1027467882]
+stream = ExtResource("6_k0nhr")
