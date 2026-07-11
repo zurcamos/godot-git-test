@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bkuoqwxg5bjc3" path="res://Scripts/GameOver.cs" id="1_k52d1"]
 [ext_resource type="Texture2D" uid="uid://c25w8u8fbu01u" path="res://icon.svg" id="1_m5628"]
 [ext_resource type="AudioStream" uid="uid://pm2avntx4fkq" path="res://Assets/lose.wav" id="2_ktc4i"]
+[ext_resource type="Texture2D" uid="uid://qxstn5q3t1hf" path="res://Assets/unitytut-cloud.png" id="4_uib17"]
+[ext_resource type="AudioStream" uid="uid://b5c61hyc7rmmo" path="res://Assets/LOSS.wav" id="5_rdiyk"]
 
 [sub_resource type="InputEventMouseButton" id="InputEventMouseButton_k52d1"]
 device = -1
@@ -58,4 +60,24 @@ text = "Retry"
 icon = ExtResource("1_m5628")
 expand_icon = true
 
+[node name="Button2" type="Button" parent="." unique_id=1172806444]
+layout_mode = 0
+offset_left = 976.0
+offset_top = 33.0
+offset_right = 1118.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.8745098, 0.09019608, 0.8745098, 1)
+theme_override_font_sizes/font_size = 34
+text = "LEAVE"
+icon = ExtResource("4_uib17")
+flat = true
+autowrap_trim_flags = 0
+icon_alignment = 1
+expand_icon = true
+
+[node name="ScoreAudio" type="AudioStreamPlayer" parent="." unique_id=1718304699]
+stream = ExtResource("5_rdiyk")
+autoplay = true
+
 [connection signal="pressed" from="Button" to="." method="RETYR"]
+[connection signal="pressed" from="Button2" to="." method="RETYR2"]

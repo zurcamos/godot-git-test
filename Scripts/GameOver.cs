@@ -16,5 +16,9 @@ public partial class GameOver : Control
 		GD.Print("btn pressed");
 		GetTree().ChangeSceneToFile("res://Scenes/FlappyBird.tscn");
 	}
+	public void RETYR2()
+	{
+		GetTree().Quit();
+	}
 
 }

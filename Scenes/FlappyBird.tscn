@@ -93,8 +93,9 @@ theme_override_colors/font_color = Color(0.4745098, 1, 1, 1)
 theme_override_font_sizes/font_size = 230
 text = "Score: 0"
 
-[node name="LogicManager" type="Node2D" parent="." unique_id=1589461450 node_paths=PackedStringArray("scoreText") groups=["LogicManager"]]
+[node name="LogicManager" type="Node2D" parent="." unique_id=1589461450 node_paths=PackedStringArray("scorePlayer", "scoreText") groups=["LogicManager"]]
 script = ExtResource("5_xgk6d")
+scorePlayer = NodePath("ScoreAudio")
 scoreText = NodePath("../Label")
 
 [node name="ScoreAudio" type="AudioStreamPlayer" parent="LogicManager" unique_id=1027467882]
