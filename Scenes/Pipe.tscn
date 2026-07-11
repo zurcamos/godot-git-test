@@ -1,9 +1,29 @@
 [gd_scene format=3 uid="uid://dq0d878a65h0"]
 
 [ext_resource type="Texture2D" uid="uid://ca0lygpdqm7ik" path="res://Assets/unitytut-pipe.png" id="1_8f5oa"]
+[ext_resource type="Script" uid="uid://8vqcudvbtca4" path="res://Scripts/PipeMovement.cs" id="1_nq301"]
 
-[node name="RigidBody2D" type="RigidBody2D" unique_id=1979598675]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
+size = Vector2(467, 2185)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=210815476]
-position = Vector2(726, -17)
+[node name="Pipe" type="RigidBody2D" unique_id=1979598675]
+scale = Vector2(0.5, 0.5)
+gravity_scale = 0.0
+script = ExtResource("1_nq301")
+minMaxOffset = 30.0
+speed = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1142762636]
+position = Vector2(0, -1700)
+shape = SubResource("RectangleShape2D_4kxuq")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=210815476]
+texture = ExtResource("1_8f5oa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=337405102]
+position = Vector2(0, 1700)
+rotation = 3.1415925
+shape = SubResource("RectangleShape2D_4kxuq")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D2" unique_id=362849326]
 texture = ExtResource("1_8f5oa")
