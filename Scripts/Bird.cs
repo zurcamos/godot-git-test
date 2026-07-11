@@ -28,7 +28,7 @@ public partial class Bird : CharacterBody2D
 		{
 			KinematicCollision2D collision = GetSlideCollision(i);
 			Node collider = (Node)collision.GetCollider();
-
+			GD.Print(collider.Name);
 			if (collider.IsInGroup("Death"))
 			{
 				GetTree().ReloadCurrentScene();
