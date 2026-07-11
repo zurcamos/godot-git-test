@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://btdoa338ib12t" path="res://Scenes/Bird.tscn" id="1_4vrfs"]
 [ext_resource type="PackedScene" uid="uid://dq0d878a65h0" path="res://Scenes/Pipe.tscn" id="1_ns864"]
 [ext_resource type="Script" uid="uid://ctg8ov4thquj3" path="res://Scripts/PipeSpawner.cs" id="3_jcie0"]
+[ext_resource type="Script" uid="uid://2ed7qlvjfrub" path="res://Scripts/KillZoneLogic.cs" id="4_0jcdb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
 size = Vector2(312, 3853)
@@ -20,7 +21,8 @@ script = ExtResource("3_jcie0")
 pipe = ExtResource("1_ns864")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1348270639 groups=["DestroyPipe"]]
-position = Vector2(-3256, 0)
+position = Vector2(-3256, -5)
+script = ExtResource("4_0jcdb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1190560473 groups=["DestroyPipe"]]
 position = Vector2(-5, 0)
