@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://2ed7qlvjfrub" path="res://Scripts/KillZoneLogic.cs" id="4_0jcdb"]
 [ext_resource type="Script" uid="uid://ensgxkcypfkx" path="res://Scripts/LogicManager.cs" id="5_xgk6d"]
 [ext_resource type="AudioStream" uid="uid://nw87cr4kslds" path="res://Assets/PointGet.wav" id="6_k0nhr"]
+[ext_resource type="AudioStream" uid="uid://c2ury223a5mwy" path="res://Assets/music.wav" id="10_6fkjr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stn4p"]
 size = Vector2(4634, 272)
@@ -92,9 +93,14 @@ theme_override_colors/font_color = Color(0.4745098, 1, 1, 1)
 theme_override_font_sizes/font_size = 230
 text = "Score: 0"
 
-[node name="LogicManager" type="Node2D" parent="." unique_id=1589461450 node_paths=PackedStringArray("scoreText") groups=["LogicManager"]]
+[node name="LogicManager" type="Node2D" parent="." unique_id=1589461450 node_paths=PackedStringArray("scorePlayer", "scoreText") groups=["LogicManager"]]
 script = ExtResource("5_xgk6d")
+scorePlayer = NodePath("ScoreAudio")
 scoreText = NodePath("../Label")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="LogicManager" unique_id=1027467882]
+[node name="ScoreAudio" type="AudioStreamPlayer" parent="LogicManager" unique_id=1027467882]
 stream = ExtResource("6_k0nhr")
+
+[node name="MusicAudio" type="AudioStreamPlayer" parent="LogicManager" unique_id=2092939616]
+stream = ExtResource("10_6fkjr")
+autoplay = true
