@@ -4,3 +4,7 @@
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1118456519]
 polygon = PackedVector2Array(-10, -4, -7, -7, 0, -9, 7, -7, 10, -4, 10, 5, 7, 8, 0, 10, -7, 8, -10, 5)
+
+[node name="Wing" type="AnimatedSprite2D" parent="." unique_id=276723656]
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1898898211]
