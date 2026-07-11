@@ -23,12 +23,8 @@ public partial class LogicManager : Node2D
 	public void updateScore()
 	{
 		score += 1;
-<<<<<<< Updated upstream
-		scoreText.Text = $"Score: {score}😘";
-=======
 		scoreText.Text = $"Score: {score}";
 		audioPlayer.PitchScale = (float)GD.RandRange(0.9,1.1);
 		audioPlayer.Play();
->>>>>>> Stashed changes
 	}
 }
