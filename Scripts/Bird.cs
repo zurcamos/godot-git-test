@@ -18,8 +18,10 @@ public partial class Bird : CharacterBody2D
 		// Handle Jump.
 		if (Input.IsAnythingPressed())
 		{
+			//GetNode<AnimatedSprite2D>("Wing").animationPlayer.Play("flap");
 			velocity.Y = JumpVelocity;
 		}
+		//TODO: if vel is negative, play flap anim
 		velocity.X = 0;
 		Velocity = velocity;
 		MoveAndSlide();

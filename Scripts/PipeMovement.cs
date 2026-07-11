@@ -32,4 +32,13 @@ public partial class PipeMovement : RigidBody2D
 	{
 		QueueFree();
 	}
+	public void _OnScoreAreaEntered(Node2D collision)
+	{
+		GD.Print(collision.Name);
+		if (collision is Bird)
+		{
+			GD.Print("Scored");
+			GetTree().CallGroup("Game", "AddScore");
+		}
+	}
 }
