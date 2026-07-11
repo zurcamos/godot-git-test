@@ -20,13 +20,14 @@ public partial class Bird : CharacterBody2D
 		{
 			velocity.Y = JumpVelocity;
 		}
-
+		velocity.X = 0;
 		Velocity = velocity;
 		MoveAndSlide();
 	}
 
 	public void _OnBodyEntered(Node2D collision)
 	{
+		GD.Print("Bird hit something");
 		if (collision is RigidBody2D)
 		{
 			GetTree().ReloadCurrentScene();
