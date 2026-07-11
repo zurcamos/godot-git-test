@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://u3m1j34kaqdl"]
+
+[ext_resource type="Texture2D" uid="uid://c25w8u8fbu01u" path="res://icon.svg" id="1_ay717"]
+[ext_resource type="Script" uid="uid://dnncv6wre7lvv" path="res://Scripts/Char.cs" id="1_rjfhe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stn4p"]
+size = Vector2(20, 80)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1816457732 node_paths=PackedStringArray("label")]
+script = ExtResource("1_rjfhe")
+JumpVelocity = -700.0
+label = NodePath("Label")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1609029868]
+shape = SubResource("RectangleShape2D_stn4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1215754677]
+texture = ExtResource("1_ay717")
+region_enabled = true
+region_rect = Rect2(33, 27, 20, 80)
+region_filter_clip_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=597000000]
+
+[node name="Label" type="Label" parent="." unique_id=1794242539]
+unique_name_in_owner = true
+offset_left = -20.0
+offset_top = -63.0
+offset_right = 20.0
+offset_bottom = -40.0
