@@ -23,15 +23,16 @@ public partial class Bird : CharacterBody2D
 		velocity.X = 0;
 		Velocity = velocity;
 		MoveAndSlide();
-	}
 
-	public void _OnBodyEntered(Node2D collision)
-	{
-		GD.Print("Bird hit something");
-		if (collision is CollisionShape2D)
+		for (int i = 0; i < GetSlideCollisionCount(); i++)
 		{
-			GetTree().ReloadCurrentScene();
+			KinematicCollision2D collision = GetSlideCollision(i);
+			Node collider = (Node)collision.GetCollider();
+
+			if (collider.IsInGroup("Death"))
+			{
+				GetTree().ReloadCurrentScene();
+			}
 		}
 	}
-
 }
