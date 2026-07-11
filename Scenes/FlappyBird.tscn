@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://casjl11vlmr75"]
 
+[ext_resource type="PackedScene" uid="uid://btdoa338ib12t" path="res://Scenes/Bird.tscn" id="1_4vrfs"]
+
 [node name="Node2D" type="Node2D" unique_id=1575369684]
+
+[node name="Bird" parent="." unique_id=2090627605 instance=ExtResource("1_4vrfs")]

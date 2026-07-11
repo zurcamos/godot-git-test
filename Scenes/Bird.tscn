@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://btdoa338ib12t"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_6m8fg"]
+
 [node name="Bird" type="CharacterBody2D" unique_id=2090627605]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1118456519]
 polygon = PackedVector2Array(-10, -4, -7, -7, 0, -9, 7, -7, 10, -4, 10, 5, 7, 8, 0, 10, -7, 8, -10, 5)
+
+[node name="Wing" type="AnimatedSprite2D" parent="." unique_id=276723656]
+sprite_frames = SubResource("SpriteFrames_6m8fg")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1898898211]
