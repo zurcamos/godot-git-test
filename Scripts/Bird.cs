@@ -28,7 +28,7 @@ public partial class Bird : CharacterBody2D
 	public void _OnBodyEntered(Node2D collision)
 	{
 		GD.Print("Bird hit something");
-		if (collision is RigidBody2D)
+		if (collision is CollisionShape2D)
 		{
 			GetTree().ReloadCurrentScene();
 		}
