@@ -3,13 +3,17 @@ using System;
 
 public partial class Bird : CharacterBody2D
 {
+	private AudioStreamPlayer audioPlayer;
 	[Export] public float JumpVelocity;
 	[Export] private float gravity;
 	private bool holding;
+
 	public override void _Ready()
 	{
 		Velocity = new Vector2(0, -2000);
+		audioPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
 	}
+
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
@@ -25,6 +29,8 @@ public partial class Bird : CharacterBody2D
 			{
 				holding = true;
 				velocity.Y = JumpVelocity;
+				audioPlayer.PitchScale = (float)GD.RandRange(0.9,1.1);
+				audioPlayer.Play();
 			}
 		}
 		else

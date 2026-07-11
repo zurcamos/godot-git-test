@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dxg7e8g3xx2o1"]
+
+[ext_resource type="Texture2D" uid="uid://qxstn5q3t1hf" path="res://Assets/unitytut-cloud.png" id="1_4rphk"]
+
+[node name="Cloud" type="Sprite2D" unique_id=1485527979]
+texture = ExtResource("1_4rphk")

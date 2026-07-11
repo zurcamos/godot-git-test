@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://pjb7x72svbt3" path="res://Assets/unitytut-birdbody.png" id="2_okd8w"]
 [ext_resource type="Texture2D" uid="uid://dgt8y3frctwt4" path="res://Assets/unitytut-birdwingdown.png" id="3_tto85"]
 [ext_resource type="Texture2D" uid="uid://bmvh7haumrqgr" path="res://Assets/unitytut-birdwingup.png" id="4_qo1os"]
+[ext_resource type="AudioStream" uid="uid://byhd6s41y3ayu" path="res://Assets/freesound_community-wing-flap-1-6434.mp3" id="5_okd8w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_stn4p"]
 radius = 215.00232
@@ -47,3 +48,6 @@ position = Vector2(-232, 13)
 sprite_frames = SubResource("SpriteFrames_6m8fg")
 animation = &"flap"
 autoplay = "flap"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1555342250]
+stream = ExtResource("5_okd8w")

@@ -3,7 +3,7 @@ using System;
 
 public partial class LogicManager : Node2D
 {
-	[Export] private AudioStreamPlayer audioPlayer;
+	private AudioStreamPlayer audioPlayer;
 	[Export] public Label scoreText;
 	private int score = 0;
 	// Called when the node enters the scene tree for the first time.

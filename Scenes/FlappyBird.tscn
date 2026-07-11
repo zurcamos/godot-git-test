@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://casjl11vlmr75"]
 
 [ext_resource type="PackedScene" uid="uid://btdoa338ib12t" path="res://Scenes/Bird.tscn" id="1_4vrfs"]
+[ext_resource type="Texture2D" uid="uid://do2mxtmeh5gll" path="res://Assets/FlappyBirdBG.webp" id="1_fm53n"]
 [ext_resource type="PackedScene" uid="uid://dq0d878a65h0" path="res://Scenes/Pipe.tscn" id="1_ns864"]
+[ext_resource type="Script" uid="uid://c3olachwa7di8" path="res://Scripts/CloudSpawner.cs" id="2_645ib"]
 [ext_resource type="Script" uid="uid://ctg8ov4thquj3" path="res://Scripts/PipeSpawner.cs" id="3_jcie0"]
 [ext_resource type="Script" uid="uid://2ed7qlvjfrub" path="res://Scripts/KillZoneLogic.cs" id="4_0jcdb"]
 [ext_resource type="Script" uid="uid://ensgxkcypfkx" path="res://Scripts/LogicManager.cs" id="5_xgk6d"]
@@ -22,9 +24,19 @@ size = Vector2(312, 3853)
 
 [node name="Node2D" type="Node2D" unique_id=1575369684]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1992995264]
+position = Vector2(38, -136)
+scale = Vector2(1.4399993, 1.4399993)
+texture = ExtResource("1_fm53n")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=843718938]
 zoom = Vector2(0.25, 0.25)
 limit_enabled = false
+
+[node name="CloudSpawner" type="Node2D" parent="." unique_id=825264985]
+script = ExtResource("2_645ib")
+cloud = ExtResource("1_4vrfs")
+offset = 500.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1852774760 groups=["Death"]]
 position = Vector2(0, -3)
