@@ -1,13 +1,46 @@
 [gd_scene format=3 uid="uid://btdoa338ib12t"]
 
+[ext_resource type="Script" uid="uid://dbk4aoejdayfm" path="res://Scripts/Bird.cs" id="1_6djdu"]
+[ext_resource type="Texture2D" uid="uid://pjb7x72svbt3" path="res://Assets/unitytut-birdbody.png" id="2_okd8w"]
+[ext_resource type="Texture2D" uid="uid://dgt8y3frctwt4" path="res://Assets/unitytut-birdwingdown.png" id="3_tto85"]
+[ext_resource type="Texture2D" uid="uid://bmvh7haumrqgr" path="res://Assets/unitytut-birdwingup.png" id="4_qo1os"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_stn4p"]
+radius = 215.00232
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6m8fg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tto85")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tto85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qo1os")
+}],
+"loop": 1,
+"name": &"flap",
+"speed": 5.0
+}]
 
 [node name="Bird" type="CharacterBody2D" unique_id=2090627605]
+script = ExtResource("1_6djdu")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1118456519]
-polygon = PackedVector2Array(-10, -4, -7, -7, 0, -9, 7, -7, 10, -4, 10, 5, 7, 8, 0, 10, -7, 8, -10, 5)
-
-[node name="Wing" type="AnimatedSprite2D" parent="." unique_id=276723656]
-sprite_frames = SubResource("SpriteFrames_6m8fg")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=968701479]
+shape = SubResource("CircleShape2D_stn4p")
 
 [node name="Body" type="Sprite2D" parent="." unique_id=1898898211]
+position = Vector2(8, -44)
+texture = ExtResource("2_okd8w")
+
+[node name="Wing" type="AnimatedSprite2D" parent="." unique_id=276723656]
+position = Vector2(-232, 13)
+sprite_frames = SubResource("SpriteFrames_6m8fg")
+animation = &"flap"
