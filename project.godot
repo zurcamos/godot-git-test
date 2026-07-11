@@ -27,6 +27,7 @@ project/assembly_name="Godot-git-test"
 
 DestroyPipe="Destroys Pipe"
 Death=""
+LogicManager=""
 
 [input]
 

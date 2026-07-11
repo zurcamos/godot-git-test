@@ -4,7 +4,7 @@ using System;
 public partial class PipeSpawner : Node2D
 {
 	[Export] public PackedScene pipe {get; set;}
-	private float spawnTimer;
+	private float spawnTimer = 3;
 	[Export] public float spawnTime = 3;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()

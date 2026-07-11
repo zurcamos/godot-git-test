@@ -38,5 +38,6 @@ offset_bottom = -906.0
 theme_override_font_sizes/font_size = 230
 text = "Score: 0"
 
-[node name="LogicManager" type="Node2D" parent="." unique_id=1589461450]
+[node name="LogicManager" type="Node2D" parent="." unique_id=1589461450 node_paths=PackedStringArray("scoreText") groups=["LogicManager"]]
 script = ExtResource("5_xgk6d")
+scoreText = NodePath("../Label")

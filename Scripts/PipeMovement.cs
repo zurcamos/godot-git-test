@@ -9,6 +9,8 @@ public partial class PipeMovement : RigidBody2D
 	[Export] private float speed;
 	[Export] private Area2D score { get; set; }
 
+	private LogicManager logicManager;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -17,7 +19,7 @@ public partial class PipeMovement : RigidBody2D
 		Vector2 pos = Position;
 		pos.Y = offset;
 		Position = pos;
-		// GetNode<Area2D>("%killZone").Connect("body_entered", new Callable(this, "KILLME"));
+		logicManager = GetTree().GetFirstNodeInGroup("LogicManager") as LogicManager;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,6 +39,7 @@ public partial class PipeMovement : RigidBody2D
 		if (collision is Bird)
 		{
 			GD.Print("Scored");
+			logicManager.updateScore();
 		}
 	}
 }
