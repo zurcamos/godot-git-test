@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://u3m1j34kaqdl" path="res://Scenes/char.tscn" id="3_8gbba"]
 [ext_resource type="Script" uid="uid://bf0o1ouxnhc2j" path="res://Scripts/DebugOverlay.cs" id="4_jjvhh"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4kxuq"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stn4p"]
 size = Vector2(126, 126)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4kxuq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8ng6"]
 size = Vector2(600, 70)
@@ -31,20 +31,17 @@ texture = ExtResource("2_bo1nx")
 region_enabled = true
 region_rect = Rect2(13, 12.5, 19, 18)
 
-[node name="TestSprite" type="CharacterBody2D" parent="." unique_id=399876004]
-unique_name_in_owner = true
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=170172050]
 position = Vector2(272, -87)
+physics_material_override = SubResource("PhysicsMaterial_4kxuq")
+gravity_scale = 3.0
 
-[node name="Sprite2D" type="Sprite2D" parent="TestSprite" unique_id=2145014025]
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=2145014025]
 texture = ExtResource("2_bo1nx")
 flip_v = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestSprite" unique_id=685095389]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=685095389]
 shape = SubResource("RectangleShape2D_stn4p")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="TestSprite" unique_id=170172050]
-physics_material_override = SubResource("PhysicsMaterial_4kxuq")
-gravity_scale = 3.0
 
 [node name="CharacterBody2D" parent="." unique_id=1816457732 instance=ExtResource("3_8gbba")]
 
