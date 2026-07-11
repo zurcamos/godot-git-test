@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dq0d878a65h0" path="res://Scenes/Pipe.tscn" id="1_ns864"]
 [ext_resource type="Script" uid="uid://ctg8ov4thquj3" path="res://Scripts/PipeSpawner.cs" id="3_jcie0"]
 [ext_resource type="Script" uid="uid://2ed7qlvjfrub" path="res://Scripts/KillZoneLogic.cs" id="4_0jcdb"]
+[ext_resource type="Script" uid="uid://ensgxkcypfkx" path="res://Scripts/LogicManager.cs" id="5_xgk6d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
 size = Vector2(312, 3853)
@@ -28,3 +29,14 @@ script = ExtResource("4_0jcdb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killZone" unique_id=1190560473 groups=["DestroyPipe"]]
 position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_4kxuq")
+
+[node name="Label" type="Label" parent="." unique_id=765035150]
+offset_left = -2224.0
+offset_top = -1220.0
+offset_right = -1406.0
+offset_bottom = -906.0
+theme_override_font_sizes/font_size = 230
+text = "Score: 0"
+
+[node name="LogicManager" type="Node2D" parent="." unique_id=1589461450]
+script = ExtResource("5_xgk6d")
