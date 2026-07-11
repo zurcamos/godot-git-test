@@ -21,6 +21,6 @@ public partial class LogicManager : Node2D
 	public void updateScore()
 	{
 		score += 1;
-		scoreText.Text = $"Score: {score}";
+		scoreText.Text = $"Score: {score}😘";
 	}
 }

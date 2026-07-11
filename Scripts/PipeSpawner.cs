@@ -20,9 +20,9 @@ public partial class PipeSpawner : Node2D
 		spawnTimer += (float)delta;
 		if (spawnTimer >= spawnTime)
 		{
-			float scaling = Math.Clamp((float)logicManager.getScore() / 10, 1, 3);
+			float scaling = Math.Clamp((float)logicManager.getScore() / 10, 1, 2);
 			spawnTime = 3 / scaling;
-			spawnTimer = (float)GD.RandRange(0, 1.0 / scaling);
+			spawnTimer = (float)GD.RandRange(0, .5 / scaling);
 			Node2D newPipe = pipe.Instantiate<Node2D>();
 			newPipe.GlobalPosition = GlobalPosition;
 			AddChild(newPipe);
