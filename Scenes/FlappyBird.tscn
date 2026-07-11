@@ -21,6 +21,10 @@ size = Vector2(312, 3853)
 
 [node name="Node2D" type="Node2D" unique_id=1575369684]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=843718938]
+zoom = Vector2(0.25, 0.25)
+limit_enabled = false
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1852774760 groups=["Death"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1103976556]
@@ -43,9 +47,6 @@ shape = SubResource("RectangleShape2D_stn4p")
 position = Vector2(0, 1182)
 scale = Vector2(1, 272)
 texture = SubResource("GradientTexture1D_stn4p")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=843718938]
-zoom = Vector2(0.25, 0.25)
 
 [node name="Bird" parent="." unique_id=2090627605 instance=ExtResource("1_4vrfs")]
 position = Vector2(-1300, 0)
