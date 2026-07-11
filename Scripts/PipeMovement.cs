@@ -21,7 +21,7 @@ public partial class PipeMovement : RigidBody2D
 	public override void _Process(double delta)
 	{
 		Vector2 pos = Position;
-		pos.X += speed;
+		pos.X += speed*(float)delta;
 		Position = pos;
 	}
 }

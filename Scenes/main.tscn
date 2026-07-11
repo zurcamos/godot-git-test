@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bp2qieql7vvsc" path="res://Scripts/Main.cs" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://c25w8u8fbu01u" path="res://icon.svg" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://u3m1j34kaqdl" path="res://Scenes/char.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dq0d878a65h0" path="res://Scenes/Pipe.tscn" id="3_kry3j"]
 [ext_resource type="Script" uid="uid://bf0o1ouxnhc2j" path="res://Scripts/DebugOverlay.cs" id="4_jjvhh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4kxuq"]
@@ -30,6 +31,9 @@ scale = Vector2(63.526314, 37.77778)
 texture = ExtResource("2_bo1nx")
 region_enabled = true
 region_rect = Rect2(13, 12.5, 19, 18)
+
+[node name="Pipe" parent="." unique_id=1979598675 instance=ExtResource("3_kry3j")]
+scale = Vector2(0.25, 0.25)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=170172050]
 position = Vector2(272, -87)
