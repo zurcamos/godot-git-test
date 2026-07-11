@@ -30,7 +30,6 @@ public partial class PipeMovement : RigidBody2D
 
 	public void KILLME()
 	{
-		GD.Print("I'm dead skullemoji");
 		QueueFree();
 	}
 }
