@@ -15,7 +15,6 @@ zoom = Vector2(0.25, 0.25)
 [node name="Pipe" parent="." unique_id=1979598675 instance=ExtResource("1_ns864")]
 
 [node name="Bird" parent="." unique_id=2090627605 instance=ExtResource("1_4vrfs")]
-script = null
 
 [node name="PipeSpawner" type="Node2D" parent="." unique_id=1312090795]
 position = Vector2(2304, 0)
