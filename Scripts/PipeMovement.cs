@@ -14,12 +14,13 @@ public partial class PipeMovement : RigidBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		logicManager = GetTree().GetFirstNodeInGroup("LogicManager") as LogicManager;
 		AddToGroup("Death");
 		offset = (float)GD.RandRange(minMaxOffset, -minMaxOffset);
 		Vector2 pos = Position;
 		pos.Y = offset;
 		Position = pos;
-		logicManager = GetTree().GetFirstNodeInGroup("LogicManager") as LogicManager;
+		speed = speed * logicManager.getScore();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

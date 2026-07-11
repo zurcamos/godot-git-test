@@ -14,9 +14,13 @@ public partial class LogicManager : Node2D
 	public override void _Process(double delta)
 	{
 	}
-
-	public void updateScore() {
-		score+=1;
+	public int getScore()
+	{
+		return score;
+	}
+	public void updateScore()
+	{
+		score += 1;
 		scoreText.Text = $"Score: {score}";
 	}
 }
