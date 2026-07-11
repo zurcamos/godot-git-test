@@ -37,6 +37,7 @@ position = Vector2(272, -87)
 
 [node name="Sprite2D" type="Sprite2D" parent="TestSprite" unique_id=2145014025]
 texture = ExtResource("2_bo1nx")
+flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestSprite" unique_id=685095389]
 shape = SubResource("RectangleShape2D_stn4p")
