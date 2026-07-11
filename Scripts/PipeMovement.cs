@@ -20,7 +20,7 @@ public partial class PipeMovement : RigidBody2D
 		Vector2 pos = Position;
 		pos.Y = offset;
 		Position = pos;
-		speed = speed * logicManager.getScore();
+		speed = speed * Mathf.Min(logicManager.getScore(), 1);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
