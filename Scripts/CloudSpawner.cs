@@ -4,7 +4,6 @@ using System;
 public partial class CloudSpawner : Node2D
 {
 	[Export] public PackedScene cloud {get; set;}
-	[Export] public float offset;
 	private float spawnTimer;
 	[Export] public float spawnTimeMin = 0.5f;
 	[Export] public float spawnTimeMax = 2.5f;
@@ -18,12 +17,17 @@ public partial class CloudSpawner : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		spawnTimer+=(float)delta;
+		if (spawnTimer>=spawnTime) {
+			spawnCloud();
+		}
 	}
 
 	public void spawnCloud() {
+		spawnTimer = 0;
 		spawnTime = (float)GD.RandRange(spawnTimeMin,spawnTimeMax);
 		Node2D newCloud = cloud.Instantiate<Node2D>();
-		newCloud.GlobalPosition = GlobalPosition + new Vector2(0,(float)GD.RandRange(-offset,offset));
+		newCloud.GlobalPosition = GlobalPosition;
 		AddChild(newCloud);
 	}
 }
