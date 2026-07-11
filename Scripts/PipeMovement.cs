@@ -17,7 +17,7 @@ public partial class PipeMovement : RigidBody2D
 		Vector2 pos = Position;
 		pos.Y = offset;
 		Position = pos;
-		GetNode<Area2D>("%killZone").Connect("body_entered", new Callable(this, "KILLME"));
+		// GetNode<Area2D>("%killZone").Connect("body_entered", new Callable(this, "KILLME"));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
