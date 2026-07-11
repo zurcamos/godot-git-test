@@ -48,7 +48,6 @@ texture = SubResource("GradientTexture1D_stn4p")
 zoom = Vector2(0.25, 0.25)
 
 [node name="Bird" parent="." unique_id=2090627605 instance=ExtResource("1_4vrfs")]
-gravity = -3000.0
 
 [node name="PipeSpawner" type="Node2D" parent="." unique_id=1312090795]
 position = Vector2(2304, -300)
