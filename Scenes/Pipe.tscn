@@ -13,7 +13,7 @@ size = Vector2(156, 1366)
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_nq301")
-minMaxOffset = 1000.0
+minMaxOffset = 700.0
 speed = -1000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1142762636]

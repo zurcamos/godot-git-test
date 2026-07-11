@@ -51,7 +51,7 @@ zoom = Vector2(0.25, 0.25)
 gravity = -3000.0
 
 [node name="PipeSpawner" type="Node2D" parent="." unique_id=1312090795]
-position = Vector2(2304, 0)
+position = Vector2(2304, -300)
 script = ExtResource("3_jcie0")
 pipe = ExtResource("1_ns864")
 
