@@ -20,7 +20,7 @@ public partial class PipeMovement : RigidBody2D
 		Vector2 pos = Position;
 		pos.Y = offset;
 		Position = pos;
-		speed = speed * Mathf.Max(logicManager.getScore(), 1);
+		speed = speed * scoreMult(logicManager.getScore());
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,7 +30,11 @@ public partial class PipeMovement : RigidBody2D
 
 		// MoveAndSlide();
 	}
-
+	private float scoreMult(int score)
+	{
+		score = Math.Max(score, 1);
+		return Math.Clamp((float)score / 10, 1, 3);
+	}
 	public void KILLME()
 	{
 		QueueFree();
