@@ -18,11 +18,14 @@ public partial class Bird : CharacterBody2D
 		if (Input.IsAnythingPressed())
 		{
 			//GetNode<AnimatedSprite2D>("Wing").animationPlayer.Play("flap");
-			if (!holding) {
+			if (!holding)
+			{
 				holding = true;
 				velocity.Y = JumpVelocity;
 			}
-		} else {
+		}
+		else
+		{
 			holding = false;
 		}
 		//TODO: if vel is negative, play flap anim
@@ -34,7 +37,7 @@ public partial class Bird : CharacterBody2D
 		{
 			KinematicCollision2D collision = GetSlideCollision(i);
 			Node collider = (Node)collision.GetCollider();
-			GD.Print(collider.Name);
+			//GD.Print(collider.Name);
 			if (collider.IsInGroup("Death"))
 			{
 				GetTree().ReloadCurrentScene();
