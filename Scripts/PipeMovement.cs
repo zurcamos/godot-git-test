@@ -16,7 +16,7 @@ public partial class PipeMovement : RigidBody2D
 	{
 		logicManager = GetTree().GetFirstNodeInGroup("LogicManager") as LogicManager;
 		AddToGroup("Death");
-		offset = minMaxOffset;//(float)GD.RandRange(minMaxOffset, -minMaxOffset);
+		offset = -minMaxOffset;//(float)GD.RandRange(minMaxOffset, -minMaxOffset);
 		Vector2 pos = Position;
 		pos.Y = offset;
 		Position = pos;
