@@ -9,8 +9,8 @@ size = Vector2(467, 2185)
 [node name="Pipe" type="RigidBody2D" unique_id=1979598675]
 gravity_scale = 0.0
 script = ExtResource("1_nq301")
-minMaxOffset = 30.0
-speed = 5.0
+minMaxOffset = 1000.0
+speed = -1000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1142762636]
 position = Vector2(0, -1700)
