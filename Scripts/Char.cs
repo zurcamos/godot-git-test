@@ -34,6 +34,18 @@ public partial class Char : CharacterBody2D
     /// Maximum angle that player can turn before stopping.
     /// </summary>
     public float maxTurnAngle = 53.5f;
+	   /// <summary>
+    /// Force applied when jumping.
+    /// </summary>
+    public float jumpForce = 11;
+    /// <summary>
+    /// Cool down time before player can jump again.
+    /// </summary>
+    public float jumpCoolDown = 0.15f;
+	  if (isTurning)
+            Turn();
+        else
+            Balance();
 	*/
 	public override void _PhysicsProcess(double delta)
 	{
@@ -76,7 +88,7 @@ public partial class Char : CharacterBody2D
 		}
 		if (jumping > 2)
 		{
-			vel = Vector2.FromAngle(180) * 200;
+			vel = Vector2.FromAngle(Rotation) * 200;
 		}
 		if (jumping > 0)
 		{
