@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://u3m1j34kaqdl"]
 
-[ext_resource type="Texture2D" uid="uid://c25w8u8fbu01u" path="res://icon.svg" id="1_ay717"]
 [ext_resource type="Script" uid="uid://dnncv6wre7lvv" path="res://Scripts/Char.cs" id="1_rjfhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stn4p"]
 size = Vector2(20, 80)
+
+[sub_resource type="Gradient" id="Gradient_ay717"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.46666667, 0.32941177, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jjvhh"]
+gradient = SubResource("Gradient_ay717")
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1816457732 node_paths=PackedStringArray("label")]
 script = ExtResource("1_rjfhe")
@@ -15,7 +21,7 @@ label = NodePath("Label")
 shape = SubResource("RectangleShape2D_stn4p")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1215754677]
-texture = ExtResource("1_ay717")
+texture = SubResource("GradientTexture1D_jjvhh")
 region_enabled = true
 region_rect = Rect2(33, 27, 20, 80)
 region_filter_clip_enabled = true
