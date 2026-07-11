@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bkuoqwxg5bjc3" path="res://Scripts/GameOver.cs" id="1_k52d1"]
 [ext_resource type="Texture2D" uid="uid://c25w8u8fbu01u" path="res://icon.svg" id="1_m5628"]
+[ext_resource type="AudioStream" uid="uid://pm2avntx4fkq" path="res://Assets/lose.wav" id="2_ktc4i"]
 
 [sub_resource type="InputEventMouseButton" id="InputEventMouseButton_k52d1"]
 device = -1
@@ -22,6 +23,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k52d1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=388191757]
+stream = ExtResource("2_ktc4i")
+volume_db = -15.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1277677221]
 layout_mode = 0
