@@ -20,10 +20,11 @@ position = Vector2(2304, 0)
 script = ExtResource("3_jcie0")
 pipe = ExtResource("1_ns864")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1348270639 groups=["DestroyPipe"]]
+[node name="killZone" type="Area2D" parent="." unique_id=1348270639 groups=["DestroyPipe"]]
+unique_name_in_owner = true
 position = Vector2(-3256, -5)
 script = ExtResource("4_0jcdb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1190560473 groups=["DestroyPipe"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killZone" unique_id=1190560473 groups=["DestroyPipe"]]
 position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_4kxuq")
