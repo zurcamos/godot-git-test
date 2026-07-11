@@ -4,22 +4,26 @@ using System;
 public partial class Bird : CharacterBody2D
 {
 	[Export] public float JumpVelocity;
+	[Export] private float gravity;
+	private bool holding;
 
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.
-		if (!IsOnFloor())
-		{
-			velocity += GetGravity() * (float)delta;
-		}
+		velocity.Y += gravity * (float)delta;
 
 		// Handle Jump.
 		if (Input.IsAnythingPressed())
 		{
 			//GetNode<AnimatedSprite2D>("Wing").animationPlayer.Play("flap");
-			velocity.Y = JumpVelocity;
+			if (!holding) {
+				holding = true;
+				velocity.Y = JumpVelocity;
+			}
+		} else {
+			holding = false;
 		}
 		//TODO: if vel is negative, play flap anim
 		velocity.X = 0;
