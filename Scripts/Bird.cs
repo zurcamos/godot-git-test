@@ -6,7 +6,10 @@ public partial class Bird : CharacterBody2D
 	[Export] public float JumpVelocity;
 	[Export] private float gravity;
 	private bool holding;
-
+	public override void _Ready()
+	{
+		Velocity = new Vector2(0, -2000);
+	}
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;

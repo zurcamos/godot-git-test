@@ -32,7 +32,8 @@ animations = [{
 
 [node name="Bird" type="CharacterBody2D" unique_id=2090627605]
 script = ExtResource("1_6djdu")
-JumpVelocity = -800.0
+JumpVelocity = -2000.0
+gravity = 3000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=968701479]
 shape = SubResource("CircleShape2D_stn4p")
