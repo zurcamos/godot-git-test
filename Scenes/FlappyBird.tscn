@@ -23,4 +23,5 @@ pipe = ExtResource("1_ns864")
 position = Vector2(-3256, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1190560473 groups=["DestroyPipe"]]
+position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_4kxuq")

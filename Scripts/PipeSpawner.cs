@@ -3,6 +3,7 @@ using System;
 
 public partial class PipeSpawner : Node2D
 {
+	[Export] public Area2D deathzone {get; set;}
 	[Export] public PackedScene pipe {get; set;}
 	private float spawnTimer;
 	[Export] public float spawnTime = 3;

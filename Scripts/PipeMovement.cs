@@ -11,6 +11,7 @@ public partial class PipeMovement : RigidBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		AddToGroup("Death");
 		offset = (float)GD.RandRange(-minMaxOffset,minMaxOffset);
 		Vector2 pos = Position;
 		pos.Y = offset;
@@ -20,8 +21,13 @@ public partial class PipeMovement : RigidBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Vector2 pos = Position;
-		pos.X += speed*(float)delta;
-		Position = pos;
+		LinearVelocity = new Vector2(speed,0);
+
+		// MoveAndSlide();
+	}
+
+	public void KILLME() {
+		GD.Print("I'm dead skullemoji");
+		QueueFree();
 	}
 }
