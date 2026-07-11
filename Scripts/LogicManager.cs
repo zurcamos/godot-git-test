@@ -24,7 +24,7 @@ public partial class LogicManager : Node2D
 	{
 		score += 1;
 		scoreText.Text = $"Score: {score}";
-		audioPlayer.PitchScale = (float)GD.RandRange(0.9,1.1);
+		audioPlayer.PitchScale = (float)GD.RandRange(0.9, 1.1);
 		audioPlayer.Play();
 	}
 }
