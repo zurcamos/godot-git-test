@@ -6,10 +6,43 @@
 [ext_resource type="Script" uid="uid://2ed7qlvjfrub" path="res://Scripts/KillZoneLogic.cs" id="4_0jcdb"]
 [ext_resource type="Script" uid="uid://ensgxkcypfkx" path="res://Scripts/LogicManager.cs" id="5_xgk6d"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stn4p"]
+size = Vector2(4634, 272)
+
+[sub_resource type="Gradient" id="Gradient_xgk6d"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_stn4p"]
+gradient = SubResource("Gradient_xgk6d")
+width = 4637
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
 size = Vector2(312, 3853)
 
 [node name="Node2D" type="Node2D" unique_id=1575369684]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1852774760 groups=["Death"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1103976556]
+position = Vector2(0, 1182)
+shape = SubResource("RectangleShape2D_stn4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2129517716]
+position = Vector2(0, 1182)
+scale = Vector2(1, 272)
+texture = SubResource("GradientTexture1D_stn4p")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1748687495]
+position = Vector2(0, -2649)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1933030460]
+position = Vector2(0, 1182)
+shape = SubResource("RectangleShape2D_stn4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1990456791]
+position = Vector2(0, 1182)
+scale = Vector2(1, 272)
+texture = SubResource("GradientTexture1D_stn4p")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=843718938]
 zoom = Vector2(0.25, 0.25)

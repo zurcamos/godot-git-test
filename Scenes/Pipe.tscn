@@ -10,6 +10,7 @@ size = Vector2(467, 2185)
 size = Vector2(156, 1366)
 
 [node name="Pipe" type="RigidBody2D" unique_id=1979598675 groups=["Death"]]
+collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_nq301")
 minMaxOffset = 1000.0
