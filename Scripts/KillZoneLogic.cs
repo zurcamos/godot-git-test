@@ -11,7 +11,6 @@ public partial class KillZoneLogic : Area2D
 
 	private void OnBodyEntered(Node2D other) {
 		if (other.IsInGroup("Death")) {
-			GD.Print("Kill the pipe");
 			PipeMovement pipe = other as PipeMovement;
 
 			if (pipe!=null) {

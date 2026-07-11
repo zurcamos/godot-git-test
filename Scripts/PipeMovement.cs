@@ -43,7 +43,6 @@ public partial class PipeMovement : RigidBody2D
 	{
 		if (collision is Bird)
 		{
-			GD.Print("Scored");
 			logicManager.updateScore();
 		}
 	}
