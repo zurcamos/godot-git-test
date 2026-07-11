@@ -29,7 +29,7 @@ public partial class Bird : CharacterBody2D
 			{
 				holding = true;
 				velocity.Y = JumpVelocity;
-				audioPlayer.PitchScale = (float)GD.RandRange(0.9,1.1);
+				audioPlayer.PitchScale = (float)GD.RandRange(0.9, 1.1);
 				audioPlayer.Play();
 			}
 		}
@@ -49,7 +49,7 @@ public partial class Bird : CharacterBody2D
 			//GD.Print(collider.Name);
 			if (collider.IsInGroup("Death"))
 			{
-				GetTree().ReloadCurrentScene();
+				GetTree().ChangeSceneToFile("res://Scenes/GameOver.tscn");
 			}
 		}
 	}
