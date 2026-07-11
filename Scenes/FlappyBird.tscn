@@ -26,6 +26,10 @@ size = Vector2(312, 3853)
 
 [node name="Node2D" type="Node2D" unique_id=1575369684]
 
+[node name="MusicAudio" type="AudioStreamPlayer" parent="." unique_id=2092939616]
+stream = ExtResource("10_6fkjr")
+autoplay = true
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1992995264]
 position = Vector2(38, -136)
 scale = Vector2(1.4399993, 1.4399993)
@@ -100,7 +104,3 @@ scoreText = NodePath("../Label")
 
 [node name="ScoreAudio" type="AudioStreamPlayer" parent="LogicManager" unique_id=1027467882]
 stream = ExtResource("6_k0nhr")
-
-[node name="MusicAudio" type="AudioStreamPlayer" parent="LogicManager" unique_id=2092939616]
-stream = ExtResource("10_6fkjr")
-autoplay = true
