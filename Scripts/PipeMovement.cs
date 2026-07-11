@@ -15,7 +15,7 @@ public partial class PipeMovement : RigidBody2D
 	public override void _Ready()
 	{
 		AddToGroup("Death");
-		offset = (float)GD.RandRange(-minMaxOffset, minMaxOffset);
+		offset = (float)GD.RandRange(minMaxOffset, -minMaxOffset);
 		Vector2 pos = Position;
 		pos.Y = offset;
 		Position = pos;
