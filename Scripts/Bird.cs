@@ -3,8 +3,7 @@ using System;
 
 public partial class Bird : CharacterBody2D
 {
-	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+	[Export] public float JumpVelocity;
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -17,24 +16,21 @@ public partial class Bird : CharacterBody2D
 		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept"))
+		if (Input.IsAnythingPressed())
 		{
 			velocity.Y = JumpVelocity;
-		}
-
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-		if (direction != Vector2.Zero)
-		{
-			velocity.X = direction.X * Speed;
-		}
-		else
-		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 		}
 
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+	public void _OnBodyEntered(Node2D collision)
+	{
+		if (collision is RigidBody2D)
+		{
+			GetTree().ReloadCurrentScene();
+		}
+	}
+
 }
