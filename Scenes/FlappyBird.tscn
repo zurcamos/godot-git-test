@@ -35,9 +35,16 @@ zoom = Vector2(0.25, 0.25)
 limit_enabled = false
 
 [node name="CloudSpawner" type="Node2D" parent="." unique_id=825264985]
+position = Vector2(1400, 0)
 script = ExtResource("2_645ib")
 cloud = ExtResource("3_645ib")
-offset = 500.0
+spawnTimeMin = 0.25
+spawnTimeMax = 1.5
+
+[node name="PipeSpawner" type="Node2D" parent="." unique_id=1312090795]
+position = Vector2(2304, -300)
+script = ExtResource("3_jcie0")
+pipe = ExtResource("1_ns864")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1852774760 groups=["Death"]]
 position = Vector2(0, -3)
@@ -66,11 +73,6 @@ texture = SubResource("GradientTexture1D_stn4p")
 [node name="Bird" parent="." unique_id=2090627605 instance=ExtResource("1_4vrfs")]
 position = Vector2(-1300, 0)
 JumpVelocity = -1900.0
-
-[node name="PipeSpawner" type="Node2D" parent="." unique_id=1312090795]
-position = Vector2(2304, -300)
-script = ExtResource("3_jcie0")
-pipe = ExtResource("1_ns864")
 
 [node name="killZone" type="Area2D" parent="." unique_id=1348270639 groups=["DestroyPipe"]]
 unique_name_in_owner = true

@@ -6,3 +6,7 @@
 [node name="Cloud" type="Sprite2D" unique_id=1485527979]
 texture = ExtResource("1_4rphk")
 script = ExtResource("2_d2ojt")
+baseSpeed = -350.0
+speedOffset = 300.0
+scaleOffset = 0.25
+yOffset = 1100.0
