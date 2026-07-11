@@ -45,3 +45,4 @@ texture = ExtResource("2_okd8w")
 position = Vector2(-232, 13)
 sprite_frames = SubResource("SpriteFrames_6m8fg")
 animation = &"flap"
+autoplay = "flap"

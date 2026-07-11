@@ -30,7 +30,15 @@ public partial class PipeMovement : RigidBody2D
 
 	public void KILLME()
 	{
-		GD.Print("I'm dead skullemoji");
 		QueueFree();
+	}
+	public void _OnScoreAreaEntered(Node2D collision)
+	{
+		GD.Print(collision.Name);
+		if (collision is Bird)
+		{
+			GD.Print("Scored");
+			GetTree().CallGroup("Game", "AddScore");
+		}
 	}
 }
