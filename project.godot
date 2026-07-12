@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Godot-git-test"
-run/main_scene="uid://3ebbvfhhysax"
+run/main_scene="uid://bf1viutkpicbl"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 

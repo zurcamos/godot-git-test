@@ -23,7 +23,7 @@ velocity = Vector2(50, 0)
 [sub_resource type="Shortcut" id="Shortcut_rdiyk"]
 events = [SubResource("InputEventMouseMotion_bfgkh")]
 
-[node name="Control" type="Control" unique_id=541895691]
+[node name="Control" type="Control" unique_id=541895691 node_paths=PackedStringArray("scoreText")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,6 +31,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k52d1")
+scoreText = NodePath("RichTextLabel2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=388191757]
 stream = ExtResource("2_ktc4i")
@@ -81,6 +82,17 @@ flat = true
 autowrap_trim_flags = 0
 icon_alignment = 1
 expand_icon = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=497739491]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 545.0
+offset_right = 705.93616
+offset_bottom = 641.0
+theme_override_colors/default_color = Color(0.5347643, 0.28931594, 0.9250822, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Score: 0"
+horizontal_alignment = 1
 
 [node name="ScoreAudio" type="AudioStreamPlayer" parent="." unique_id=1718304699]
 stream = ExtResource("5_rdiyk")
